@@ -4,8 +4,12 @@
 
 ## 项目包括模型实现代码
 
-### 摘要：
-全氟和多氟烷基物质（PFAS）因碳-氟具有极高的化学稳定性和抗降解性，近年来已成为全球水体生态系统去除任务中最具挑战性的持久性有机污染物之一。在众多深度处理技术中，聚酰胺膜分离技术被视为最具前景的解决方案。然而，在实际工业水处理动态过程中，聚酰胺膜表面不可避免地发生复杂的污染累积与物理化学性质变化。这种变化会导致基于传统静态数据训练的机器学习模型在预测截留率时面临严重的的概念漂移（Concept Drift）问题，模型无法捕捉随时间变化的新特征关系，导致预测精度随运行时间显著衰退。为了克服这一难题，本研究基于滑动窗口机制与实时漂移检测策略构建了一种面向动态数据流的自适应机器学习预测框架，在此基础上，开发了动态自适应机器学习算法（AP-RF、AP-XGBoost与APSI-XGBoost）。模型在包含151组动态过滤场景与38项多维物理化学特征描述符的综合数据集上进行评估，评估性能表明，该框架的引入使模型展现出卓越的抗漂移能力与泛化性能，显著优于传统静态模型。研究还引入了时序交叉评估矩阵与时序SHAP分析，揭示了聚酰胺膜截留PFAS的物理机理随污染进程的动态演化规律。同时，通过后续特征工程分析，明确了聚酰胺膜截留含氟污染物的物理机理。本研究不仅为复杂工业动态膜分离过程提供了高度鲁棒的实时预测工具，同时从数据驱动视角，为高选择性聚酰胺膜的设计与工艺参数优化提供了深刻理论依据。
+### Abstract：
 
-### 关键词：
-动态数据流机器学习 (Dynamic data stream machine learning)；概念漂移 (Concept drift)；聚酰胺膜 (Polyamide membranes)；全氟和多氟烷基物质 (PFAS)；时序可解释性分析 (Temporal SHAP analysis)。
+Per- and polyfluoroalkyl substances (PFAS) have become one of the most challenging persistent organic pollutants in global aquatic ecosystem remediation due to the high chemical stability and degradation resistance of carbon-fluorine (C-F) bonds. Among various treatment technologies, membrane separation based on polyamide (PA) membranes is considered the most promising method. Machine learning (ML) algorithms are frequently employed to guide the rejection process and predict rejection rates. However, with the drawback of concept prediciton in ML, traditional ML models are constructed within a static framework and trained on fixed datasets, which limits their ability to capture time-varying feature relationships in membrane separation process. 
+In this study, to address the concept drift issue, we construct an adaptive ML prediction framework for dynamic data streams, incorporating a sliding window mechanism and a real-time drift detection strategy.. The models were evaluated using a comprehensive dataset consisting of 151 dynamic filtration scenarios and 38 multidimensional physicochemical feature descriptors. Performance evaluation demonstrates that the models exhibit exceptional drift resistance and generalization capabilities, significantly outperforming traditional static models. The results reveal that hydrophobic interactions dominate the initial filtration stage, while size sieving becomes the governing factor once the fouling layer develops and stabilizes..It not only provides a real-time predictive tool for complex dynamic industrial membrane separation processes but also offers a theoretical basis for the design of highly selective PA membranes and the optimization of process parameters from a data-driven perspective.
+
+### Keywords: 
+Dynamic data stream machine learning; Concept drift; Polyamide membranes; Per- and polyfluoroalkyl substances (PFAS) 
+ 
+
